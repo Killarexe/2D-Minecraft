@@ -1,4 +1,4 @@
-#include "../hdr/Game.hpp"
+/*#include "Game.hpp"
 
 int main() {
 	game::create(); 
@@ -9,4 +9,11 @@ int main() {
 	game::close(); 
 
 	return 0; 
+}*/
+
+#include <stdio.h>
+
+int main() {
+  printf("Hello, world!");
+  return 0;
 }
