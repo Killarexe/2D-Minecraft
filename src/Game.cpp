@@ -1,4 +1,4 @@
-#include "../hdr/Game.hpp"
+#include "Game.hpp"
 
 // Globals
 

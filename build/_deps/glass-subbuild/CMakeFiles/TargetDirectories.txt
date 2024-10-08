@@ -1,0 +1,3 @@
+/home/killar/projects/c-cpp/2D-Minecraft/build/_deps/glass-subbuild/CMakeFiles/glass-populate.dir
+/home/killar/projects/c-cpp/2D-Minecraft/build/_deps/glass-subbuild/CMakeFiles/edit_cache.dir
+/home/killar/projects/c-cpp/2D-Minecraft/build/_deps/glass-subbuild/CMakeFiles/rebuild_cache.dir

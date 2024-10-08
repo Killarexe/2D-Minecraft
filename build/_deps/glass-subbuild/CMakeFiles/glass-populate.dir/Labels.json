@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/killar/projects/c-cpp/2D-Minecraft/build/_deps/glass-subbuild/CMakeFiles/glass-populate"
+		},
+		{
+			"file" : "/home/killar/projects/c-cpp/2D-Minecraft/build/_deps/glass-subbuild/CMakeFiles/glass-populate.rule"
+		},
+		{
+			"file" : "/home/killar/projects/c-cpp/2D-Minecraft/build/_deps/glass-subbuild/CMakeFiles/glass-populate-complete.rule"
+		},
+		{
+			"file" : "/home/killar/projects/c-cpp/2D-Minecraft/build/_deps/glass-subbuild/glass-populate-prefix/src/glass-populate-stamp/glass-populate-build.rule"
+		},
+		{
+			"file" : "/home/killar/projects/c-cpp/2D-Minecraft/build/_deps/glass-subbuild/glass-populate-prefix/src/glass-populate-stamp/glass-populate-configure.rule"
+		},
+		{
+			"file" : "/home/killar/projects/c-cpp/2D-Minecraft/build/_deps/glass-subbuild/glass-populate-prefix/src/glass-populate-stamp/glass-populate-download.rule"
+		},
+		{
+			"file" : "/home/killar/projects/c-cpp/2D-Minecraft/build/_deps/glass-subbuild/glass-populate-prefix/src/glass-populate-stamp/glass-populate-install.rule"
+		},
+		{
+			"file" : "/home/killar/projects/c-cpp/2D-Minecraft/build/_deps/glass-subbuild/glass-populate-prefix/src/glass-populate-stamp/glass-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/killar/projects/c-cpp/2D-Minecraft/build/_deps/glass-subbuild/glass-populate-prefix/src/glass-populate-stamp/glass-populate-patch.rule"
+		},
+		{
+			"file" : "/home/killar/projects/c-cpp/2D-Minecraft/build/_deps/glass-subbuild/glass-populate-prefix/src/glass-populate-stamp/glass-populate-test.rule"
+		},
+		{
+			"file" : "/home/killar/projects/c-cpp/2D-Minecraft/build/_deps/glass-subbuild/glass-populate-prefix/src/glass-populate-stamp/glass-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"glass-populate"
+		],
+		"name" : "glass-populate"
+	}
+}
