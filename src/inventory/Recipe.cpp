@@ -1,5 +1,5 @@
-#include "../../hdr/inventory/Recipe.hpp"
-#include "../../hdr/graphics/Render.hpp"
+#include "inventory/Recipe.hpp"
+#include "graphics/Render.hpp"
 
 namespace engine {
 	Recipe::Recipe() :

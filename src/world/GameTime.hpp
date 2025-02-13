@@ -1,7 +1,7 @@
 #pragma once
 
 // Dependencies
-#include "../Resources.hpp"
+#include "Resources.hpp"
 
 namespace engine {
 	using TimeStruct = std::tm;

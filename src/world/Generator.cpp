@@ -1,5 +1,5 @@
-#include "../../hdr/world/Generator.hpp"
-#include "../../hdr/graphics/Render.hpp"
+#include "world/Generator.hpp"
+#include "graphics/Render.hpp"
 
 namespace engine {
 	Generator::Generator() : 

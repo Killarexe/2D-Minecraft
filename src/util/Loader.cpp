@@ -1,4 +1,4 @@
-#include "../../hdr/util/Loader.hpp"
+#include "util/Loader.hpp"
 
 namespace engine {
 	StringPair seperate(const std::string& string, char seperator) {

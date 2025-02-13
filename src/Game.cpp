@@ -12,7 +12,7 @@ namespace game {
 
 	void create() {
 #ifndef mDebug
-		FreeConsole(); 
+		//FreeConsole(); //Windows stff booo. 
 #endif
 		srand(time(0));
 		menuState.setState(static_cast<int>(MenuState::LoadingScreen));

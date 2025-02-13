@@ -3,7 +3,7 @@ project(2D-Minecraft VERSION 4.0.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(BUILD_SHARED_LIBS OFF)
+set(BUILD_SHARED_LIBS ON)
 
 include(FetchContent)
 FetchContent_Declare(SFML
@@ -12,16 +12,15 @@ FetchContent_Declare(SFML
   GIT_SHALLOW ON
   EXCLUDE_FROM_ALL
   SYSTEM)
-FetchContent_MakeAvailable(SFML)
-
-set(BUILD_SHARED_LIBS OFF)
 FetchContent_Declare(
   GLASS
-  GIT_REPOSITORY "https://github.com/Killarexe/Glass-4.0.git"
+  GIT_REPOSITORY https://github.com/Killarexe/Glass-4.0.git
   GIT_TAG "main"
   GIT_PROGRESS TRUE
-)
-FetchContent_MakeAvailable(GLASS)
+  GIT_SHALLOW ON
+  EXCLUDE_FROM_ALL
+  SYSTEM)
+FetchContent_MakeAvailable(GLASS SFML)
 
 # Recursively find all source files in the src directory
 file(GLOB_RECURSE PROJECT_SOURCES CONFIGURE_DEPENDS "${CMAKE_CURRENT_LIST_DIR}/src/*.cpp")
@@ -30,7 +29,7 @@ set(PROJECT_INCLUDE "${CMAKE_CURRENT_LIST_DIR}/src/")
 add_executable(${PROJECT_NAME})
 
 target_sources(${PROJECT_NAME} PRIVATE ${PROJECT_SOURCES})
-target_link_libraries(${PROJECT_NAME} PUBLIC sfml-graphics sfml-window sfml-system glass)
+target_link_libraries(${PROJECT_NAME} PUBLIC sfml-graphics sfml-window sfml-system Glass)
 
 # Include directories
 target_include_directories(${PROJECT_NAME} 

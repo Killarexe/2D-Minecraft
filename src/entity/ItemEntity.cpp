@@ -1,8 +1,8 @@
-#include "../../hdr/entity/ItemEntity.hpp"
-#include "../../hdr/entity/Player.hpp"
-#include "../../hdr/entity/Collision.hpp"
-#include "../../hdr/graphics/UI.hpp"
-#include "../../hdr/util/Random.hpp"
+#include "entity/ItemEntity.hpp"
+#include "entity/Player.hpp"
+#include "entity/Collision.hpp"
+#include "graphics/UI.hpp"
+#include "util/Random.hpp"
 
 namespace engine {
 	ItemEntity::ItemEntity() :

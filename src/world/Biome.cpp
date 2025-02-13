@@ -1,8 +1,9 @@
-#include "../../hdr/world/Biome.hpp"
-#include "../../hdr/world/Generator.hpp"
-#include "../../hdr/graphics/Render.hpp"
+#include "world/Biome.hpp"
+#include "graphics/Render.hpp"
+#include "world/Generator.hpp"
 
 namespace engine {
+
 	const Block::Id logTypes[static_cast<int>(TreeType::End)] = {
 		Block::Air, Block::OakLog, Block::BirchLog, Block::Cactus, 
 		Block::SpruceLog, Block::JungleLog,	Block::AcaciaLog

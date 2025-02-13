@@ -1,7 +1,7 @@
-#include "../../hdr/graphics/Render.hpp"
-#include "../../hdr/graphics/UI.hpp"
-#include "../../hdr/world/Generation.hpp"
-#include "../../hdr/entity/Spawn.hpp"
+#include "graphics/Render.hpp"
+#include "graphics/UI.hpp"
+#include "world/Generation.hpp"
+#include "entity/Spawn.hpp"
 
 namespace engine {
 	namespace render {
@@ -484,26 +484,26 @@ namespace engine {
 
 			const gs::Color baseTopSkyColor = gs::util::approach(
 				topSkyColors[colorIndex0], topSkyColors[colorIndex1],
-				colorBlendPercentage
+				static_cast<gs::Color>(colorBlendPercentage)
 			);
 			const gs::Color baseBottomSkyColor = gs::util::approach(
 				bottomSkyColors[colorIndex0], bottomSkyColors[colorIndex1],
-				colorBlendPercentage
+				static_cast<gs::Color>(colorBlendPercentage)
 			);
 			const float baseSkyBrightness = 
 				getBaseSkyBrightness(gameTime.gameTicks);
 			
 			gs::Color baseSkyColor = gs::util::approach(
-				baseTopSkyColor, baseBottomSkyColor, 80.0f);
+				baseTopSkyColor, baseBottomSkyColor, static_cast<gs::Color>(80.0f));
 			gs::util::approach(&baseSkyColor, gs::Color::White, 
-				100.0f - baseSkyBrightness);  
+				static_cast<gs::Color>(100.0f - baseSkyBrightness));  
 
 			const float skyBrightness = skyBrightnessParabola(
 				gameTime.gameTicks); 
 			const gs::Color currentTopSkyColor = gs::util::approach(
-				baseTopSkyColor, lighting::ambientLightColor, skyBrightness);
+				baseTopSkyColor, lighting::ambientLightColor, static_cast<gs::Color>(skyBrightness));
 			const gs::Color currentBottomSkyColor = gs::util::approach(
-				baseBottomSkyColor, lighting::ambientLightColor, skyBrightness);
+				baseBottomSkyColor, lighting::ambientLightColor, static_cast<gs::Color>(skyBrightness));
 
 			lighting::sunlightColor = baseSkyColor;
 			lighting::sunlightBrightness = baseSkyBrightness;
@@ -650,7 +650,7 @@ namespace engine {
 					
 					gs::Color biomeBackgroundColor = gs::util::approach(
 						lighting::sunlightColor, lighting::moonlightColor,
-						lighting::sunlightBrightness
+						static_cast<gs::Color>(lighting::sunlightBrightness)
 					);
 					biomeBackgroundColor -= gs::Color(
 						backgroundShadow, backgroundShadow, backgroundShadow
@@ -700,7 +700,7 @@ namespace engine {
 				overlayColor = gs::util::approach(
 					biomeColors[biomeColorIndex], 
 					biomeColors[biomeColorIndex + 1], 
-					std::fmod(biomeColorPercentage, 100.0f)
+					static_cast<gs::Color>(std::fmod(biomeColorPercentage, 100.0f))
 				);
 
 				for (tilePosition.y = renderableVerticalRange.x; 

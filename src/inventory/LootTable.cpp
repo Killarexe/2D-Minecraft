@@ -1,6 +1,6 @@
-#include "../../hdr/inventory/LootTable.hpp"
-#include "../../hdr/graphics/Render.hpp"
-#include "../../hdr/util/Random.hpp"
+#include "inventory/LootTable.hpp"
+#include "graphics/Render.hpp"
+#include "util/Random.hpp"
 
 namespace engine {
 	LootTable::LootPair::LootPair() :

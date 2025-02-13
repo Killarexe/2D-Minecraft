@@ -1,4 +1,4 @@
-#include "../../hdr/world/GameTime.hpp"
+#include "world/GameTime.hpp"
 
 namespace engine {
 	GameTime::GameTime() : gameTicks(0) {
@@ -16,7 +16,7 @@ namespace engine {
 	const TimeStruct getCurrentTime() {
 		const std::time_t currentTime = std::time(0); 
 		TimeStruct timeStruct; 
-		::localtime_s(&timeStruct, &currentTime);
+		::localtime_r(&currentTime, &timeStruct);
 		return timeStruct; 
 	}
 }

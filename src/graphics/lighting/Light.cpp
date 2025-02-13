@@ -1,5 +1,5 @@
-#include "../../../hdr/graphics/lighting/Light.hpp"
-#include "../../../hdr/graphics/Render.hpp"
+#include "graphics/lighting/Light.hpp"
+#include "graphics/Render.hpp"
 
 namespace engine {
 	namespace render {
@@ -28,7 +28,7 @@ namespace engine {
 				if (id == Light::Sunlight) {
 					color = sunlightColor; 
 					gs::util::approach(&color, moonlightColor, 
-						sunlightBrightness);
+						static_cast<gs::Color>(sunlightBrightness));
 				}
 				
 				if (flicker) {
@@ -37,7 +37,7 @@ namespace engine {
 							+ position.x + (3.0f * position.y); 
 
 					gs::util::approach(&color, TileColor::Black,
-						getLightPercentage(value)); 
+						static_cast<gs::Color>(getLightPercentage(value))); 
 				}
 
 				return color; 

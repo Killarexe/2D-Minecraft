@@ -3,7 +3,7 @@
 // Dependencies
 #include "World.hpp"
 #include "../util/Random.hpp"
-#include "../../vendor/FractalNoise.h"
+#include "../util/maths/FractalNoise.h"
 
 namespace engine {
 	class Generator {

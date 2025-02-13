@@ -1,4 +1,4 @@
-#include "../../hdr/entity/Gravity.hpp"
+#include "entity/Gravity.hpp"
 
 namespace engine {
 	void applyGravity(Entity& entity) {

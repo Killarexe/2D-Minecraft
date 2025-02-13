@@ -1,4 +1,4 @@
-#include "../../hdr/world/PathFinding.hpp"
+#include "world/PathFinding.hpp"
 
 namespace engine {
 	size_t HashContainer::operator()(const gs::Vec2i& vec) const {

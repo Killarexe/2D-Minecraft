@@ -1,5 +1,5 @@
-#include "../../hdr/audio/Audio.hpp"
-#include "../../hdr/graphics/Render.hpp"
+#include "audio/Audio.hpp"
+#include "graphics/Render.hpp"
 
 namespace engine {
 	namespace audio {

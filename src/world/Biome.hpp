@@ -4,7 +4,8 @@
 #include "Tile.hpp"
 
 namespace engine {
-	extern class Generator; 
+
+  class Generator;
 
 	enum class TreeType { 
 		None, Oak, Birch, Cactus, Spruce, Jungle, Acacia, End 

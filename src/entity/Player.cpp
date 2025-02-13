@@ -1,9 +1,9 @@
-#include "../../hdr/entity/Player.hpp"
-#include "../../hdr/entity/ItemEntity.hpp"
-#include "../../hdr/entity/Collision.hpp"
-#include "../../hdr/graphics/UI.hpp"
-#include "../../hdr/audio/AudioEnviroment.hpp"
-#include "../../hdr/util/Random.hpp"
+#include "entity/Player.hpp"
+#include "entity/ItemEntity.hpp"
+#include "entity/Collision.hpp"
+#include "graphics/UI.hpp"
+#include "audio/AudioEnviroment.hpp"
+#include "util/Random.hpp"
 
 namespace engine {
 	Player::Player() :
@@ -44,7 +44,8 @@ namespace engine {
 		headAngle = gs::util::angleBetween(
 			gs::input::mousePosition, 
 			render::transformPosition(position + gs::Vec2f(0.0f, 
-				(size.y / 2.0f) - (eyeline / 16.0f)))
+				(size.y / 2.0f) - (eyeline / 16.0f))),
+      false
 		); 
 		headAngle -= 180.0f; 
 

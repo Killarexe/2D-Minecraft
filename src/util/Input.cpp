@@ -1,5 +1,5 @@
-#include "../../hdr/util/Input.hpp"
-#include "../../hdr/graphics/UI.hpp"
+#include "util/Input.hpp"
+#include "graphics/UI.hpp"
 
 namespace engine {
 	namespace input {

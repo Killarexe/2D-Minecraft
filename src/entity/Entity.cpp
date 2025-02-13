@@ -1,9 +1,9 @@
-#include "../../hdr/entity/Entity.hpp"
-#include "../../hdr/entity/Player.hpp"
-#include "../../hdr/entity/Mob.hpp"
-#include "../../hdr/entity/ItemEntity.hpp"
-#include "../../hdr/entity/ProjectileEntity.hpp"
-#include "../../hdr/graphics/UI.hpp"
+#include "entity/Entity.hpp"
+#include "entity/Player.hpp"
+#include "entity/Mob.hpp"
+#include "entity/ItemEntity.hpp"
+#include "entity/ProjectileEntity.hpp"
+#include "graphics/UI.hpp"
 
 namespace engine {
 	Entity::Entity() :

@@ -1,6 +1,6 @@
-#include "../../hdr/world/Chunk.hpp"
-#include "../../hdr/world/Generation.hpp"
-#include "../../hdr/graphics/lighting/Lighting.hpp"
+#include "world/Chunk.hpp"
+#include "world/Generation.hpp"
+#include "graphics/lighting/Lighting.hpp"
 
 namespace engine {
 	Chunk::Chunk() : 

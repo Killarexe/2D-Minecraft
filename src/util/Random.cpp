@@ -1,4 +1,4 @@
-#include "../../hdr/util/Random.hpp"
+#include "util/Random.hpp"
 
 namespace engine {
 	Random::Random() {

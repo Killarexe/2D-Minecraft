@@ -1,8 +1,8 @@
-#include "../../hdr/world/World.hpp"
-#include "../../hdr/world/Generation.hpp"
-#include "../../hdr/graphics/UI.hpp"
-#include "../../hdr/entity/Collision.hpp"
-#include "../../hdr/audio/AudioEnviroment.hpp"
+#include "world/World.hpp"
+#include "world/Generation.hpp"
+#include "graphics/UI.hpp"
+#include "entity/Collision.hpp"
+#include "audio/AudioEnviroment.hpp"
 
 namespace engine {
 	World::World() :

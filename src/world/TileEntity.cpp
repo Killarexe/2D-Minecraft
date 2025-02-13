@@ -1,6 +1,6 @@
-#include "../../hdr/world/TileEntity.hpp"
-#include "../../hdr/graphics/Window.hpp"
-#include "../../hdr/inventory/LootTable.hpp"
+#include "world/TileEntity.hpp"
+#include "graphics/Window.hpp"
+#include "inventory/LootTable.hpp"
 
 namespace engine {
 	TileEntity::Tags::Tags() : asInt(0ull){

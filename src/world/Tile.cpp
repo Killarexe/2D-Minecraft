@@ -1,8 +1,8 @@
-#include "../../hdr/world/Tile.hpp"
-#include "../../hdr/util/Random.hpp"
-#include "../../hdr/entity/Collision.hpp"
-#include "../../hdr/graphics/UI.hpp"
-#include "../../hdr/audio/AudioEnviroment.hpp"
+#include "world/Tile.hpp"
+#include "util/Random.hpp"
+#include "entity/Collision.hpp"
+#include "graphics/UI.hpp"
+#include "audio/AudioEnviroment.hpp"
 
 namespace engine {
 	Block::Tags::Tags() : asInt(0ull) {

@@ -1,5 +1,5 @@
-#include "../../hdr/audio/AudioEnviroment.hpp"
-#include "../../hdr/util/Random.hpp"
+#include "audio/AudioEnviroment.hpp"
+#include "util/Random.hpp"
 
 namespace engine {
 	namespace audio {

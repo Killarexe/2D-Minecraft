@@ -1,5 +1,5 @@
-#include "../../hdr/graphics/Window.hpp"
-#include "../../hdr/graphics/Render.hpp"
+#include "graphics/Window.hpp"
+#include "graphics/Render.hpp"
 
 namespace engine {
 	namespace render {

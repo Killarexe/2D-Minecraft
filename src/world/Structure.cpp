@@ -1,5 +1,5 @@
-#include "../../hdr/world/Structure.hpp"
-#include "../../hdr/util/Random.hpp"
+#include "world/Structure.hpp"
+#include "util/Random.hpp"
 
 namespace engine {
 	Structure::Structure() : 

@@ -1,5 +1,5 @@
-#include "../../hdr/inventory/Item.hpp"
-#include "../../hdr/graphics/Render.hpp"
+#include "inventory/Item.hpp"
+#include "graphics/Render.hpp"
 
 namespace engine {
 	Item::Tags::Tags() : asInt(0ull) {

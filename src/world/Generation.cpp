@@ -1,4 +1,5 @@
-#include "../../hdr/world/Generation.hpp"
+#include "world/Generation.hpp"
+#include <string.h>
 
 namespace engine {
 	const int waterBodySpawnAttempts = 10;
@@ -367,7 +368,7 @@ namespace engine {
 		int* tempHeightMap = generateHeightMap(chunk.offset);
 		int heightMap[Chunk::width]; 
 
-		_memccpy(heightMap, tempHeightMap, Chunk::width, sizeof(int) 
+		memccpy(heightMap, tempHeightMap, Chunk::width, sizeof(int) 
 			* Chunk::width); 
 
 		if (prvsBiome != biome.id) {

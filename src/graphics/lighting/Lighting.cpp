@@ -1,5 +1,5 @@
-#include "../../../hdr/graphics/lighting/Lighting.hpp"
-#include "../../../hdr/entity/Spawn.hpp"
+#include "graphics/lighting/Lighting.hpp"
+#include "entity/Spawn.hpp"
 
 namespace engine {
 	namespace render {
@@ -86,7 +86,7 @@ namespace engine {
 								&& lightSource.flickerMaintainCenter 
 									? lightSource.baseColor : lightColor, 
 							ambientLightColor, 
-							std::min(ratio * 100.0f, 100.0f)
+							static_cast<gs::Color>(std::min(ratio * 100.0f, 100.0f))
 						);
 						const TileColor baseColor = world.getTileColor(xpos, ypos); 
 

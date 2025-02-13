@@ -1,5 +1,6 @@
-#include "../../hdr/entity/Model.hpp"
-#include "../../hdr/graphics/Render.hpp"
+#include "entity/Model.hpp"
+#include "graphics/Render.hpp"
+#include <Glass/glass.hpp>
 
 namespace engine {
 	Model::Segment::Segment() :
@@ -167,8 +168,11 @@ namespace engine {
 		}
 
 		// Returns segment colors back to white. 
-		for (auto& transform : transforms) 
-			gs::util::approach(&transform.color, gs::Color::White, 10.0f);
+		for (auto& trs : transforms) { 
+      trs.color.r = 1.1;
+      trs.color.g = 1.1;
+      trs.color.b = 1.1;
+    }
 
 		// Updates generic animations. 
 		gs::util::approach(&animationVelocity.x, entity.velocity.x, 

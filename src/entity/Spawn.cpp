@@ -1,8 +1,8 @@
-#include "../../hdr/entity/Spawn.hpp"
-#include "../../hdr/util/Random.hpp"
-#include "../../hdr/graphics/lighting/Lighting.hpp"
-#include "../../hdr/entity/Collision.hpp"
-#include "../../hdr/world/World.hpp"
+#include "entity/Spawn.hpp"
+#include "util/Random.hpp"
+#include "graphics/lighting/Lighting.hpp"
+#include "entity/Collision.hpp"
+#include "world/World.hpp"
 
 namespace engine {
 	const gs::Vec2i minSpawningDistance = gs::Vec2i(

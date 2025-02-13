@@ -1,4 +1,4 @@
-#include "../../hdr/inventory/Crafting.hpp"
+#include "inventory/Crafting.hpp"
 
 namespace engine {
 	ItemContainer validCraftingGrid[numOfCraftingGridSquares];

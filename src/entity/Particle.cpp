@@ -1,8 +1,8 @@
-#include "../../hdr/entity/Particle.hpp"
-#include "../../hdr/graphics/Window.hpp"
-#include "../../hdr/util/Random.hpp"
-#include "../../hdr/entity/Gravity.hpp"
-#include "../../hdr/graphics/Render.hpp"
+#include "entity/Particle.hpp"
+#include "graphics/Window.hpp"
+#include "util/Random.hpp"
+#include "entity/Gravity.hpp"
+#include "graphics/Render.hpp"
 
 namespace engine {
 	Particle::Particle() :
@@ -152,11 +152,12 @@ namespace engine {
 			);
 			tileParticle.mass = collisionEnabled ? 0.5f : 0.15f; 
 			tileParticle.collisionEnabled = collisionEnabled;
-			tileParticle.color = gs::util::approach(
-				isBlock ? render::getBlockPixelColor(static_cast<Block::Id>(tileId)) 
-					: render::getWallPixelColor(static_cast<Wall::Id>(tileId)),
-				gs::Color::Black, 10.0f
-			);
+      gs::Color newColor = isBlock ? render::getBlockPixelColor(static_cast<Block::Id>(tileId)) 
+					: render::getWallPixelColor(static_cast<Wall::Id>(tileId));
+      newColor.r *= 0.9;
+      newColor.g *= 0.9;
+      newColor.b *= 0.9;
+			tileParticle.color = newColor;
 			tileParticle.timeRemaining = collisionEnabled ? 300 : 20; 
 
 			addParticle(tileParticle); 

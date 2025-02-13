@@ -1,6 +1,6 @@
-#include "../../hdr/entity/ProjectileEntity.hpp"
-#include "../../hdr/entity/Player.hpp"
-#include "../../hdr/audio/AudioEnviroment.hpp"
+#include "entity/ProjectileEntity.hpp"
+#include "entity/Player.hpp"
+#include "audio/AudioEnviroment.hpp"
 
 namespace engine {
 	ProjectileEntity::ProjectileEntity() :

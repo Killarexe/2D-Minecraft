@@ -1,7 +1,7 @@
-#include "../../hdr/util/Chat.hpp"
-#include "../../hdr/graphics/Window.hpp"
-#include "../../hdr/util/Loader.hpp"
-#include "../../hdr/entity/Player.hpp"
+#include "util/Chat.hpp"
+#include "graphics/Window.hpp"
+#include "util/Loader.hpp"
+#include "entity/Player.hpp"
 
 namespace engine {
 	std::string username = "Player";

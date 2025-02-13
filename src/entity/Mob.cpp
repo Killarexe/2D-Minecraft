@@ -1,8 +1,10 @@
-#include "../../hdr/entity/Mob.hpp"
-#include "../../hdr/util/Random.hpp"
-#include "../../hdr/entity/Player.hpp"
-#include "../../hdr/entity/ProjectileEntity.hpp"
-#include "../../hdr/world/Generation.hpp"
+#include "entity/Mob.hpp"
+#include "util/Random.hpp"
+#include "entity/Player.hpp"
+#include "entity/ProjectileEntity.hpp"
+#include "world/Generation.hpp"
+#include <Glass/typedef.hpp>
+#include <cmath>
 
 namespace engine {
 	Mob::Mob() :
@@ -117,8 +119,9 @@ namespace engine {
 					-0.5f
 				); 
 				arrow->angle = gs::util::angleBetween(
-					position, player->position
+					position, player->position, false
 				);
+
 				arrow->angle += arrow->angle > 270 ? -8.0f : 8.0f; 
 
 				addEntity(Entity::Type::ProjectileEntity, arrow); 
@@ -164,11 +167,10 @@ namespace engine {
 				creeperDetonationTicks--;
 				velocity.x = 0.0f;  
 				horizontalSpeed = 0.0f; 
-				modelTransform.setColor(gs::util::approach(
-					gs::Color::Red, gs::Color::White, 
-					100.0f * (static_cast<float>(creeperDetonationTicks) 
-						/ static_cast<float>(maxCreeperDetonationTicks))
-				));
+        gs::Color newColor = gs::Color::White;
+        newColor.g = 255 - 255 * creeperDetonationTicks / maxCreeperDetonationTicks;
+        newColor.g = 255 - 255 * creeperDetonationTicks / maxCreeperDetonationTicks;
+				modelTransform.setColor(newColor);
 			}
 			else
 				creeperDetonationTicks = 0; 

@@ -1,5 +1,5 @@
-#include "../../hdr/entity/Collision.hpp"
-#include "../../hdr/entity/Gravity.hpp"
+#include "entity/Collision.hpp"
+#include "entity/Gravity.hpp"
 
 namespace engine {
 	namespace collision {

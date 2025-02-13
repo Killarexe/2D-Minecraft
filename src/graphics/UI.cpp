@@ -1,6 +1,6 @@
-#include "../../hdr/graphics/UI.hpp"
-#include "../../hdr/world/Generation.hpp"
-#include "../../hdr/audio/AudioEnviroment.hpp"
+#include "graphics/UI.hpp"
+#include "world/Generation.hpp"
+#include "audio/AudioEnviroment.hpp"
 
 namespace engine {
 	namespace render {
@@ -1646,7 +1646,7 @@ namespace engine {
 								gs::Vec2f(barWidth * ratio, 1.0f) * guiScale
 							);
 							durabilityBar.setFillColor(gs::util::approach(
-								gs::Color::Red, gs::Color::Green, ratio * 100.0f
+								gs::Color::Red, gs::Color::Green, static_cast<gs::Color>(ratio * 100.0f)
 							)); 
 
 							window::winmain->draw(durabilityBar); 
@@ -1659,7 +1659,7 @@ namespace engine {
 								guiScale)
 							); 
 							durabilityBar.setFillColor(gs::util::approach(
-								durabilityBar.getFillColor(), gs::Color::Black, 80.0f)
+								durabilityBar.getFillColor(), gs::Color::Black, static_cast<gs::Color>(80.0f))
 							);
 
 							window::winmain->draw(durabilityBar);
@@ -1818,15 +1818,16 @@ namespace engine {
 				else if (titleYouTubeButton.isSelected
 					&& titleYouTubeButton.isClickedOn)
 				{
-					ShellExecute(0, 0, L"https://www.youtube.com/channel/"
-						"UCC1p8piMqXKoUGosm8YeGuA", 0, 0, SW_SHOW);
+          //BOooo windows stuff
+					//ShellExecute(0, 0, L"https://www.youtube.com/channel/"
+					//	"UCC1p8piMqXKoUGosm8YeGuA", 0, 0, SW_SHOW);
 				}
 
 				titleYouTubeUnderline.setFillColor(
 					gs::util::approach(
 						titleYouTubeButton.getInactiveTextFillColor(),
 						titleYouTubeButton.getSelectedTextFillColor(),
-						titleYouTubeButton.isSelected ? 100.0f : 0.0f
+						static_cast<gs::Color>(titleYouTubeButton.isSelected ? 100.0f : 0.0f)
 					)
 				);
 			}
@@ -3108,7 +3109,7 @@ namespace engine {
 				// becomes more transparent as the title screen is loaded. 
 				const gs::Color loadingColor = gs::util::approach(
 					gs::Color::White, gs::Color::Transparent,
-					titleIntroTransparencyPercentage
+					static_cast<gs::Color>(titleIntroTransparencyPercentage)
 				);
 
 				titleIntroLogoSprite.setColor(loadingColor); 
@@ -3131,8 +3132,8 @@ namespace engine {
 
 				const gs::Color biomeBackgroundColor = gs::util::approach(
 					lighting::sunlightColor, gs::util::approach(
-						lighting::moonlightColor, gs::Color::White, 10.0f),
-					lighting::sunlightBrightness
+						lighting::moonlightColor, gs::Color::White, static_cast<gs::Color>(10.0f)),
+					static_cast<gs::Color>(lighting::sunlightBrightness)
 				);
 
 				biomeBackgroundSprite.setColor(biomeBackgroundColor);
@@ -3988,7 +3989,7 @@ namespace engine {
 
 					if (screenShadePercentage > 0.0f) {
 						screenShade.setFillColor(gs::util::approach(
-							gs::Color::White, gs::Color::Black, screenShadePercentage
+							gs::Color::White, gs::Color::Black, static_cast<gs::Color>(screenShadePercentage)
 						));
 
 						window::winmain->draw(screenShade, sf::BlendMultiply); 
@@ -4103,7 +4104,7 @@ namespace engine {
 								gs::input::mousePosition,
 								render::transformPosition(previewPlayer.position 
 									+ gs::Vec2f(0.0f, (previewPlayer.size.y / 2.0f) 
-										- (eyeline / 16.0f)))
+										- (eyeline / 16.0f))), false
 							);
 							headAngle -= 180.0f;
 
@@ -4152,7 +4153,7 @@ namespace engine {
 									gs::input::mousePosition,
 									render::transformPosition(previewPlayer.position
 										+ gs::Vec2f(0.0f, (previewPlayer.size.y / 2.0f)
-											- (eyeline / 16.0f)))
+											- (eyeline / 16.0f))), false
 								);
 								headAngle -= 180.0f;
 
@@ -4469,7 +4470,7 @@ namespace engine {
 					if (hideUIMenu) {
 						if (screenShadePercentage > 0.0f) {
 							screenShade.setFillColor(gs::util::approach(
-								gs::Color::White, gs::Color::Black, screenShadePercentage
+								gs::Color::White, gs::Color::Black, static_cast<gs::Color>(screenShadePercentage)
 							));
 
 							window::winmain->draw(screenShade, sf::BlendMultiply);
